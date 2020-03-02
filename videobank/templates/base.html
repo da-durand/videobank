@@ -1,0 +1,28 @@
+{% load i18n static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>{% block title %}Django Userena - Accounts for your Django application{% endblock %}</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Accounts for your Django application" />
+    <meta name="keywords" content="accounts, django, bread and pepper, open source" />
+    <meta name="author" content="Bread and Pepper" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/master.css" %}" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css'%}">
+    <script src="{%static 'jquery/dist/jquery.min.js'%}"></script>
+    <script src="{%static 'bootstrap/dist/js/bootstrap.min.js'%}"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  </head>
+  <body class="bg-secondary">
+        {% include 'header.html' %}
+        <main class="container pb-3 bg-white">
+            {% block content %}
+            {% endblock %}
+        </main>
+   </body>
+ </html>

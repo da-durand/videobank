@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-02 10:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: client/models.py:7
+msgid "user"
+msgstr ""
+
+#: client/templates/userena/activate_fail.html:4
+msgid "Account activation failed."
+msgstr ""
+
+#: client/templates/userena/activate_fail.html:5
+msgid "Your account could not be activated..."
+msgstr ""
+
+#: client/templates/userena/activate_fail.html:10
+msgid ""
+"Your account could not be activated. This could be because your activation "
+"link has aged."
+msgstr ""
+
+#: client/templates/userena/activate_fail.html:11
+msgid ""
+"Please try signing up again or contact us if you think something went wrong."
+msgstr ""
+
+#: client/templates/userena/email_change_complete.html:4
+msgid "Email verification"
+msgstr ""
+
+#: client/templates/userena/email_change_complete.html:5
+msgid "Confirm your new email"
+msgstr ""
+
+#: client/templates/userena/email_change_complete.html:10
+#, python-format
+msgid ""
+"You have received an email at\n"
+"            %(email)s."
+msgstr ""
+
+#: client/templates/userena/email_change_complete.html:12
+#, python-format
+msgid ""
+"To associate this email address with your account\n"
+"            (%(username)s) click on the link provided in this email."
+msgstr ""
+
+#: client/templates/userena/email_confirm_complete.html:4
+msgid "Email changed!"
+msgstr ""
+
+#: client/templates/userena/email_confirm_complete.html:6
+msgid "New email"
+msgstr ""
+
+#: client/templates/userena/email_confirm_complete.html:10
+#, python-format
+msgid ""
+"Your new email address is saved. You can continue using %(site)s\n"
+"            with this email."
+msgstr ""
+
+#: client/templates/userena/email_confirm_fail.html:4
+msgid "Email verification failed."
+msgstr ""
+
+#: client/templates/userena/email_confirm_fail.html:5
+#: client/templates/userena/email_confirm_fail.html:10
+msgid "Your email could not be verified..."
+msgstr ""
+
+#: client/templates/userena/email_confirm_fail.html:11
+msgid "You could try changing it again in your account settings."
+msgstr ""
+
+#: client/templates/userena/email_form.html:10
+#: client/templates/userena/email_form.html:26
+#: client/templates/userena/password_form.html:12
+#: client/templates/userena/password_form.html:28
+#: client/templates/userena/profile_detail.html:14
+#: client/templates/userena/profile_form.html:13
+#: client/templates/userena/profile_form.html:30
+msgid "View profile"
+msgstr ""
+
+#: client/templates/userena/email_form.html:13
+#: client/templates/userena/password_form.html:15
+#: client/templates/userena/profile_detail.html:17
+#: client/templates/userena/profile_form.html:16
+msgid "Edit details"
+msgstr ""
+
+#: client/templates/userena/email_form.html:16
+#: client/templates/userena/email_form.html:28
+#: client/templates/userena/password_form.html:4
+#: client/templates/userena/password_form.html:18
+#: client/templates/userena/password_form.html:30
+#: client/templates/userena/password_form.html:39
+#: client/templates/userena/profile_detail.html:20
+#: client/templates/userena/profile_form.html:19
+#: client/templates/userena/profile_form.html:32
+msgid "Change password"
+msgstr ""
+
+#: client/templates/userena/email_form.html:19
+#: client/templates/userena/email_form.html:29
+#: client/templates/userena/email_form.html:37
+#: client/templates/userena/password_form.html:21
+#: client/templates/userena/password_form.html:31
+#: client/templates/userena/profile_detail.html:23
+#: client/templates/userena/profile_form.html:22
+#: client/templates/userena/profile_form.html:33
+msgid "Change email"
+msgstr ""
+
+#: client/templates/userena/email_form.html:27
+#: client/templates/userena/password_form.html:29
+#: client/templates/userena/profile_form.html:31
+msgid "Edit profile"
+msgstr ""
+
+#: client/templates/userena/email_form.html:34
+msgid "Change email address"
+msgstr ""
+
+#: client/templates/userena/password_form.html:35
+msgid "Change Password"
+msgstr ""
+
+#: client/templates/userena/password_reset_complete.html:3
+msgid "Password reset"
+msgstr ""
+
+#: client/templates/userena/password_reset_complete.html:4
+msgid "Your password has been reset"
+msgstr ""
+
+#: client/templates/userena/password_reset_complete.html:8
+#, python-format
+msgid ""
+"You can now <a href=\"%(signin_url)s\">signin</a> with your new password."
+msgstr ""
+
+#: client/templates/userena/password_reset_done.html:4
+#: client/templates/userena/password_reset_done.html:5
+msgid "Password reset email sent"
+msgstr ""
+
+#: client/templates/userena/password_reset_done.html:9
+msgid ""
+"An e-mail has been sent to you which explains how to reset your password."
+msgstr ""
+
+#: client/templates/userena/password_reset_form.html:3
+msgid "Reset password"
+msgstr ""
+
+#: client/templates/userena/password_reset_form.html:9
+msgid "Reset Password"
+msgstr ""
+
+#: client/templates/userena/password_reset_form.html:13
+msgid "Send password"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:4
+msgid "profile"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:30
+msgid "Your mugshot"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:32
+msgid "Name"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:35
+msgid "Age"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:38
+msgid "Website"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:41
+msgid "Location"
+msgstr ""
+
+#: client/templates/userena/profile_detail.html:44
+msgid "About me"
+msgstr ""
+
+#: client/templates/userena/profile_form.html:4
+msgid "Account setup"
+msgstr ""
+
+#: client/templates/userena/profile_form.html:38
+msgid "Edit Profile"
+msgstr ""
+
+#: client/templates/userena/profile_form.html:41
+msgid "Save changes"
+msgstr ""
+
+#: client/templates/userena/profile_list.html:4
+msgid "Profiles"
+msgstr ""
+
+#: client/templates/userena/profile_list.html:35
+msgid "previous"
+msgstr ""
+
+#: client/templates/userena/profile_list.html:39
+msgid "Page"
+msgstr ""
+
+#: client/templates/userena/profile_list.html:39
+msgid "of"
+msgstr ""
+
+#: client/templates/userena/profile_list.html:43
+msgid "next"
+msgstr ""
+
+#: client/templates/userena/signin_form.html:4
+#: client/templates/userena/signin_form.html:11
+#: client/templates/userena/signin_form.html:37
+msgid "Signin"
+msgstr ""
+
+#: client/templates/userena/signin_form.html:31
+msgid "Forgot your password?"
+msgstr ""
+
+#: client/templates/userena/signout.html:4
+msgid "Signed out"
+msgstr ""
+
+#: client/templates/userena/signout.html:5
+msgid "You have been signed out"
+msgstr ""
+
+#: client/templates/userena/signout.html:10
+msgid "You have been signed out. Till we meet again."
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:4
+msgid "Signup almost done!"
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:6
+#: client/templates/userena/signup_form.html:4
+#: client/templates/userena/signup_form.html:11
+#: client/templates/userena/signup_form.html:29
+msgid "Signup"
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:12
+msgid "Thank you for signing up with us!"
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:15
+msgid ""
+"You have been sent an e-mail with an activation link to the supplied email."
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:17
+#, python-format
+msgid ""
+"We will store your signup information for %(userena_activation_days)s days "
+"on our server.\n"
+"            "
+msgstr ""
+
+#: client/templates/userena/signup_complete.html:20
+msgid "You can now use the supplied credentials to signin."
+msgstr ""

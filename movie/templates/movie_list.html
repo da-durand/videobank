@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<div class="d-flex pt-3 p-2">
+    <div class="movies m-auto bg-dark px-5">
+        <h2 class="text-center py-2 text-warning">{% trans "Liste des films" %}</h2>
+        <ul id="account_list" class="p-0">
+            {% for movie in object_list %}
+            <li class="list-unstyled d-flex mb-3 text-center flex-column">
+                <div class="d-flex flex-column ml-2">
+                    <a href="{% url 'movie_detail' movie.id %}" class="text-warning text-center"><img
+                            src="{{ movie.thumb }}" alt=""></a>
+                    <h4>
+                        <a href="{% url 'movie_detail' movie.id %}" class="text-warning">{{movie.label}}</a>
+                    </h4>
+                </div>
+                <div>
+
+                    {% if movie.is_rented %}
+                    <a href="" class="btn btn-warning">{% trans "Bientôt disponible" %}</a>
+                    {% else %}
+                    <a href="{% url 'movie_rent_create' movie.id %}" class="btn btn-warning">{% trans "Réserver" %}</a>
+                    {% endif %}
+                </div>
+            </li>
+            <hr class="bg-warning">
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+<div class="text-center">
+    <a href="{% url 'movie_create' %}">{% trans "Ajouter un film" %}</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<div class="d-flex pt-3 p-2">
+    <div class="movies m-auto bg-dark px-5">
+        <h2 class="text-center py-2 text-warning">{% trans "Liste des films" %}</h2>
+        <ul id="account_list" class="p-0">
+            {% for rent in object_list %}
+            {% if rent.movie.is_rented %}
+            <li class="list-unstyled d-flex mb-3 text-center flex-column">
+                <div class="d-flex flex-column ml-2">
+                    <h4>
+                        <p class="text-warning m-0">{{rent.movie.label}}</p>
+                    </h4>
+                    <h6 class="text-warning">
+                        <p class="text-warning">{{rent.client}}</p>
+                    </h6>
+                    <div class="btn-container">
+                        <a href="{% url 'movie_return' rent.id %}" class="btn border-warning text-warning">Rendu</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="bg-warning">
+            {% endif %}
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

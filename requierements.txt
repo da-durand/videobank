@@ -1,0 +1,4 @@
+django
+client
+movie
+shop

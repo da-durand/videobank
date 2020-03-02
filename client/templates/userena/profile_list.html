@@ -1,0 +1,48 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+
+{% block content_title %}<h2 class="content-title">{% trans 'Profiles' %}</h2>{% endblock %}
+
+{% block content %}
+<div class="d-flex pt-3 p-2">
+    <div class="accounts m-auto bg-dark px-5">
+        <h2 class="text-center py-2 text-warning">Liste des clients</h2>
+        <ul id="account_list" class="p-0">
+            {% for profile in profile_list %}
+            <li class="list-unstyled d-flex mb-3">
+                <a href="{% url 'userena_profile_detail' profile.user.username %}" class="text-warning"><img
+                        src="{{ profile.get_mugshot_url }}" /></a>
+                <div class="d-flex flex-column ml-2">
+                    <h4>
+                        <a href="{% url 'userena_profile_detail' profile.user.username %}"
+                            class="text-warning">{{ profile.user.username }}</a>
+                    </h4>
+                    <a href="{% url 'userena_profile_detail' profile.user.username %}"
+                        class="text-warning">{{ profile.user.email }}</a>
+                </div>
+            </li>
+            <hr class="bg-warning">
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
+{% if is_paginated %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        <a href="{% url 'userena_profile_list_paginated' page_obj.previous_page_number %}">{% trans 'previous' %}</a>
+        {% endif %}
+
+        <span class="current">
+            {% trans 'Page' %} {{ page_obj.number }} {% trans 'of' %} {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+        <a href="{% url 'userena_profile_list_paginated'  page_obj.next_page_number %}">{% trans 'next' %}</a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+{% endblock %}

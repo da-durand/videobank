@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex pt-3 p-2 justify-content-center">
+    <form id="new_movie" action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="" id="">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+
+{% block title %}{{ profile.user.username }}'s {% trans "profile" %}.{% endblock %}
+{% block content_title %}<h2 class="content-title">{{ profile.user.username }} {% if profile.user.get_full_name %}({{ profile.user.get_full_name }}){% endif %}</h2>{% endblock %}
+
+{% block content %}
+
+
+    {# Dirty hack. Will use django-guardian in the future. #}
+    {% if user.username == profile.user.username %}
+    <div id="profile-nav" class="row justify-content-around mb-3 bg-warning py-3">
+        <div class="border-dark rounded-pill py-1 px-2 bg-dark">
+            <a href="{% url 'userena_profile_detail' user.username %}" class="text-white">{% trans "View profile" %}</a>
+        </div>
+        <div class="border-dark rounded-pill py-1 px-2 bg-dark">
+            <a href="{% url 'userena_profile_edit' user.username %}" class="text-white">{% trans "Edit details" %}</a>
+        </div>
+        <div class="border-dark rounded-pill py-1 px-2 bg-dark">
+            <a href="{% url 'userena_password_change' user.username %}" class="text-white">{% trans "Change password" %}</a>
+        </div>
+        <div class="border-dark rounded-pill py-1 px-2 bg-dark">
+            <a href="{% url 'userena_email_change' user.username %}" class="text-white">{% trans "Change email" %}</a>
+        </div>
+    </div>
+    {% endif %}
+
+    <div id="details">
+        <h2 class="text-danger">INFOS MANQUANTES EN EDITION DE PROFIL</h2>
+        <img src="{{ profile.get_mugshot_url }}" alt="{% trans 'Your mugshot' %}" />
+        {% if profile.user.get_full_name %}
+        <p><strong>{% trans "Name" %}</strong><br /> {{ profile.user.get_full_name }}</p>
+        {% endif %}
+        {% if profile.age != 0 %}
+        <p><strong>{% trans "Age" %}</strong><br /> {{ profile.age }}</p>
+        {% endif %}
+        {% if profile.website %}
+        <p><strong>{% trans "Website" %}</strong><br /> <a href="{{ profile.website }}">{{ profile.website }}</a></p>
+        {% endif %}
+        {% if profile.location %}
+        <p><strong>{% trans "Location" %}</strong><br />{{ profile.location }}</p>
+        {% endif %}
+        {% if profile.about_me %}
+        <p><strong>{% trans "About me" %}</strong><br />{{ profile.about_me }}</p>
+        {% endif %}
+    </div>
+
+    <div class="locations">
+        <h2>Locations</h2>
+        {% for rent in profile.movie_rent.all %}
+        <div class="row no-gutters">
+            <div class="col-4">
+                {{rent.movie.label}}
+            </div>
+            <div class="col-4">
+                {{rent.date_out}}
+            </div>
+            <div class="col-4">
+                {% if rent.movie.is_rented %}
+                    A RENDRE
+                {% else %}
+                    Rendu : {{rent.date_return}}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
